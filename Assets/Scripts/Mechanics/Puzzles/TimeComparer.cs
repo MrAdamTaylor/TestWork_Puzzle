@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeComparer : MonoBehaviour
+public class TimeComparer : PuzzleController
 {
     [SerializeField]private FinishTimeGame _finisherGame;
     
