@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class PasswordController : PuzzleController
+public class PasswordController : MonoBehaviour
 {
     public TextMeshProUGUI Text;
 

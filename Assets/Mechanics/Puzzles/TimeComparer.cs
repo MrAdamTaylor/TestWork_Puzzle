@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeComparer : PuzzleController
+public class TimeComparer : MonoBehaviour
 {
     [SerializeField] private GameController _gameController;
     private static int _digitalMinute;
@@ -21,7 +21,6 @@ public class TimeComparer : PuzzleController
     {
         if (_arrowHour == _digitalHour && _arrowMinute == _digitalMinute)
         {
-            Debug.Log("Победа!");
             _gameController.FirstPuzzleSolved();
         }
         else
@@ -34,13 +33,13 @@ public class TimeComparer : PuzzleController
     {
         float val = f / 6;
         _arrowMinute = (int)val;
-        Debug.Log("Минута сейчас "+_arrowMinute);
+        Debug.Log("Minute Now "+_arrowMinute);
     }
 
     public void UpdateHourValue(float f)
     {
         float val = f / 15;
         _arrowHour = (int)val;
-        Debug.Log("Час сейчас "+_arrowHour);
+        Debug.Log("Hour Now "+_arrowHour);
     }
 }
