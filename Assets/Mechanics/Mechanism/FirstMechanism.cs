@@ -4,24 +4,20 @@ using UnityEngine.Serialization;
 
 public class FirstMechanism : MonoBehaviour
 {
+    [Range(1f,15f)] 
+    [SerializeField] private float _rotateSpeed = 5f;
     private bool _needMove;
-    private IEnumerator _makeStepRoutine;
-    [Range(1f,15f)]public float RotateSpeed = 5f;
-    public void Start()
-    {
-        _makeStepRoutine = MakeStep();
-    }
 
     public void Move()
     {
         _needMove = true;
-        StartCoroutine(_makeStepRoutine);
+        StartCoroutine(MakeStep());
     }
 
     public void StopMove()
     {
         _needMove = false;
-        StopCoroutine(_makeStepRoutine);
+        StopCoroutine(MakeStep());
     }
     
     private IEnumerator MakeStep()
@@ -29,15 +25,13 @@ public class FirstMechanism : MonoBehaviour
         while (_needMove)
         {
             yield return null;
-            yield return null;
-            yield return null;
             Step();
         }
     }
 
     private void Step()
     {
-        Vector3 vec = new Vector3(0,RotateSpeed,0);
+        Vector3 vec = new Vector3(0,_rotateSpeed,0);
         transform.localEulerAngles += vec;
     }
 }

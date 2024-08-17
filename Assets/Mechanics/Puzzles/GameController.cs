@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     public void ThirdPuzzleUnresolved()
     {
         _puzzleTreeSolving = false;
-        _mechanismController.StartThirdMechanism();
+        _mechanismController.StopThirdMechanism();
     }
 
     public void FirstPuzzleSolved()

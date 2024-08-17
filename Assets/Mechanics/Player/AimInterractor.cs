@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class WeaponRaycast : MonoBehaviour
+public class AimInterractor : MonoBehaviour
 {
     [SerializeField] private TimeComparer _comparer;
     
@@ -32,13 +32,6 @@ public class WeaponRaycast : MonoBehaviour
                 _marker.position = hit.point;
                 _isAiming = true;
             }
-
-            /*if (hit.transform.CompareTag("Hour"))
-            {
-                _marker.position = hit.point;
-                _isAiming = true;
-            }*/
-
         }
 
         if (!_isAiming && _marker.transform.position != _nullPosition) 
@@ -63,21 +56,6 @@ public class WeaponRaycast : MonoBehaviour
         bool hadHit = Physics.Raycast(ray, out hit, _distance);
         if (hadHit)
         {
-            /*if (hit.transform.CompareTag("Minute"))
-            {
-                Vector3 vec = new Vector3(0,0,6f);
-                hit.transform.localEulerAngles += vec;
-                _comparer.UpdateMinuteValue(hit.transform.localEulerAngles.z);
-                _comparer.Compare();
-            }
-
-            if (hit.transform.CompareTag("Hour"))
-            {
-                Vector3 vec = new Vector3(0,0,15f);
-                hit.transform.localEulerAngles += vec;
-                _comparer.UpdateHourValue(hit.transform.localEulerAngles.z);
-                _comparer.Compare();
-            }*/
             if (hit.transform.CompareTag("Interactable"))
             {
                 Interactable interactable = hit.transform.gameObject.GetComponent<Interactable>();

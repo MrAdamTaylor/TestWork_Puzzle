@@ -973,7 +973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f930a5de9e0488e9b6459eecff0b0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: 0
+  _num: 0
   _directionController: {fileID: 1101708511}
 --- !u!1 &263292062
 GameObject:
@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155577185d565dc47b5d91abf7227321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClockArrow: 0
+  _clockArrow: 0
   _comparer: {fileID: 98551116}
 --- !u!1 &294959197
 GameObject:
@@ -1486,8 +1486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 9
-  Controller: {fileID: 1829190226}
+  _key: 9
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &327266341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,8 +1700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 1
-  Controller: {fileID: 1829190226}
+  _key: 1
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &391290104
 GameObject:
   m_ObjectHideFlags: 0
@@ -3008,8 +3008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 6
-  Controller: {fileID: 1829190226}
+  _key: 6
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1001 &764783387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3074,17 +3074,57 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _groundDrag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
       propertyPath: JumpCooldown
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _orientation
+      value: 
+      objectReference: {fileID: 1133239071}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
       propertyPath: AirMultiplier
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _jumpCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _playerHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _airMultiplier
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
       propertyPath: GroundCheckPoint
       value: 
       objectReference: {fileID: 149662084}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _groundCheckPoint
+      value: 
+      objectReference: {fileID: 149662084}
+    - target: {fileID: 129205640806814261, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _whatIsGround.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285267941633078711, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _cameraPosition
+      value: 
+      objectReference: {fileID: 1947067929}
     - target: {fileID: 3382392127951761353, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3117,6 +3157,10 @@ PrefabInstance:
       propertyPath: _distance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8322428325352002561, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+      propertyPath: _cameraPosition
+      value: 
+      objectReference: {fileID: 1947067929}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
 --- !u!1 &787671504
@@ -3365,8 +3409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 2
-  Controller: {fileID: 1829190226}
+  _key: 2
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &846608960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,8 +3721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 0
-  Controller: {fileID: 1829190226}
+  _key: 0
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &925537615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,8 +4031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 7
-  Controller: {fileID: 1829190226}
+  _key: 7
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!23 &969026668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4719,6 +4763,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103641531}
   m_CullTransparentMesh: 1
+--- !u!4 &1133239071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4385182989539046075, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+  m_PrefabInstance: {fileID: 764783387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171122901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,7 +5132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f930a5de9e0488e9b6459eecff0b0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: 1
+  _num: 1
   _directionController: {fileID: 1101708511}
 --- !u!1 &1301474458
 GameObject:
@@ -5879,7 +5928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95871685b6284b3fa4b4e3cd34805854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LerpSpeed: 1
   _startPoint: {fileID: 238485631}
   _endPoint: {fileID: 637496678}
 --- !u!1 &1536266779
@@ -6103,8 +6151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 10
-  Controller: {fileID: 1829190226}
+  _key: 10
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &1579980673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6216,8 +6264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 5
-  Controller: {fileID: 1829190226}
+  _key: 5
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &1580596119
 GameObject:
   m_ObjectHideFlags: 0
@@ -6697,7 +6745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4044ac4f714d1980d9e5a2108f826c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 5
+  _rotateSpeed: 5
 --- !u!1 &1672159325
 GameObject:
   m_ObjectHideFlags: 0
@@ -6808,7 +6856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fde5563c924403c91b6fa640aca6426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectTime: 2
+  _effectTime: 2
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
@@ -6952,7 +7000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f930a5de9e0488e9b6459eecff0b0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: 2
+  _num: 2
   _directionController: {fileID: 1101708511}
 --- !u!4 &1704765956 stripped
 Transform:
@@ -7070,8 +7118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 8
-  Controller: {fileID: 1829190226}
+  _key: 8
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!65 &1739937646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7097,7 +7145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155577185d565dc47b5d91abf7227321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClockArrow: 1
+  _clockArrow: 1
   _comparer: {fileID: 98551116}
 --- !u!1 &1786762764
 GameObject:
@@ -7743,8 +7791,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 4
-  Controller: {fileID: 1829190226}
+  _key: 4
+  "_\u0441ontroller": {fileID: 1829190226}
+--- !u!4 &1947067929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2565605217355701920, guid: 6b6246ae4cd1ef54294459cdde875f71, type: 3}
+  m_PrefabInstance: {fileID: 764783387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1962689014
 GameObject:
   m_ObjectHideFlags: 0
@@ -8472,8 +8525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 3
-  Controller: {fileID: 1829190226}
+  _key: 3
+  "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0

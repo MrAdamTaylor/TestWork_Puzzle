@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine;
 
 public enum KeyValue
 {
@@ -16,61 +15,50 @@ public enum KeyValue
     Exit
 }
 
+//TODO - А если предположить, что клавишь будет несколько
 public class KeyBoardInteractable : Interactable
 {
-    public KeyValue Key;
+    [SerializeField]private KeyValue _key;
 
-    public PasswordController Controller;
+    [SerializeField]private PasswordController _сontroller;
     
     public override void Interract()
     {
-        switch (Key)
+        switch (_key)
         {
             case KeyValue.One:
-                Controller.InputKey("1");
+                _сontroller.InputKey("1");
                 break;
             case KeyValue.Two:
-                Controller.InputKey("2");
+                _сontroller.InputKey("2");
                 break;
             case KeyValue.Three:
-                Controller.InputKey("3");
+                _сontroller.InputKey("3");
                 break;
             case KeyValue.Four:
-                Controller.InputKey("4");
+                _сontroller.InputKey("4");
                 break;
             case KeyValue.Five:
-                Controller.InputKey("5");
+                _сontroller.InputKey("5");
                 break;
             case KeyValue.Six:
-                Controller.InputKey("6");
+                _сontroller.InputKey("6");
                 break;
             case KeyValue.Seven:
-                Controller.InputKey("7");
+                _сontroller.InputKey("7");
                 break;
             case KeyValue.Eight:
-                Controller.InputKey("8");
+                _сontroller.InputKey("8");
                 break;
             case KeyValue.Nine:
-                Controller.InputKey("9");
+                _сontroller.InputKey("9");
                 break;
             case KeyValue.Enter:
-                Controller.Enter();
+                _сontroller.Enter();
                 break;
             case KeyValue.Exit:
-                Controller.ResetInput();
+                _сontroller.ResetInput();
                 break;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

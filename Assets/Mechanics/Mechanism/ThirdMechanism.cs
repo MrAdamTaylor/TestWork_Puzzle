@@ -1,67 +1,46 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class ThirdMechanism : MonoBehaviour
 {
     private bool _needMove;
-    private IEnumerator _makeStepRoutine;
-    [SerializeField] private float effectTime = 2f;
-
-    public void Start()
-    {
-        _makeStepRoutine = MakeStep();
-    }
+    [SerializeField] private float _effectTime = 2f;
 
     public void Move()
     {
         _needMove = true;
-        StartCoroutine(_makeStepRoutine);
+        StartCoroutine(MakeStep());
     }
 
     public void StopMove()
     {
         _needMove = false;
-        StopCoroutine(_makeStepRoutine);
+        StopCoroutine(MakeStep());
     }
     
     private IEnumerator MakeStep()
     {
-        Vector3 startScale = new Vector3(1f,1f,1f);
-        Vector3 targetScale = new Vector3(2f,2f,2f);
+        Vector3 startScale = Constants.STANDART_SCALE;
+        Vector3 targetScale = Constants.TARGET_SCALE;
         while (true)
         {
             float time = 0;
 
-            while (time < 1)
+            while (time < Constants.MAX_SCALE_TIME)
             {
                 transform.localScale = Vector3.Lerp(transform.localScale, targetScale, time);
-                time += Time.deltaTime * effectTime;
+                time += Time.deltaTime * _effectTime;
                 yield return null;
             }
 
             time = 0;
 
-            while (time < 1)
+            while (time < Constants.MAX_SCALE_TIME)
             {
                 transform.localScale = Vector3.Lerp(transform.localScale, startScale, time);
-                time += Time.deltaTime * effectTime;
+                time += Time.deltaTime * _effectTime;
                 yield return null;
             }
         }
-    }
-
-    private void Step()
-    {
-        Vector3 vec = new Vector3(0.1f,0.1f,0.1f);
-        for (int i = 0; i < 10; i++)
-        {
-            transform.localScale += vec;
-        }
-        for (int i = 0; i < 10; i++)
-        {
-            transform.localScale -= vec;
-        }
-
     }
 }
