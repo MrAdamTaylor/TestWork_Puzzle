@@ -1,60 +1,32 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MechanismController : MonoBehaviour
 {
-    [SerializeField] private FirstMechanism _firstMechanism;
-    [SerializeField] private SecondMechanism _secondMechanism;
-    [SerializeField] private ThirdMechanism _thirdMechanism;
-    
-    private bool _firstIsActive;
-    private bool _secondIsActive;
-    private bool _thirdIsActive;
+    public List<Mechanism> Mechanisms;
 
-    public void StartFirstMechanism()
+    public void LaunchByValue(int value)
     {
-        if (!_firstIsActive)
+        for (int i = 0; i < Mechanisms.Count; i++)
         {
-            _firstMechanism.Move();
-            _firstIsActive = true;
+            if (i == value)
+            {
+                Mechanisms[i].StartMechanism();
+            }
         }
     }
 
-    public void StopFirstMechanism()
+    public void StopByValue(int value)
     {
-        _firstMechanism.StopMove();
-        _firstIsActive = false;
-    }
-
-    public void StartSecondMechanism()
-    {
-        if (!_secondIsActive)
+        for (int i = 0; i < Mechanisms.Count; i++)
         {
-            _secondMechanism.Move();
-            _secondIsActive = true;
+            if (i == value)
+            {
+                Mechanisms[i].Stop();
+            }
         }
     }
-
-    public void StopSecondMechanism()
-    {
-        _secondMechanism.StopMove();
-        _secondIsActive = false;
-    }
-    
-    public void StartThirdMechanism()
-    {
-        if (!_thirdIsActive)
-        {
-            _thirdMechanism.Move();
-            _thirdIsActive = true;
-        }
-    }
-
-    public void StopThirdMechanism()
-    {
-        _thirdMechanism.StopMove();
-        _thirdIsActive = false;
-    }
-
 }
+

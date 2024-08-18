@@ -33,11 +33,11 @@ public class DirectionController : MonoBehaviour
         if (Mathf.Approximately(_firstDirection, _secondDirection) &&
             (Mathf.Approximately(_firstDirection, _thirdDirection)))
         {
-            _gameController.ThirdPuzzleSolved();
+            _gameController.Execute(Constants.SCALE_MECHANISM);
         }
         else
         {
-            _gameController.ThirdPuzzleUnresolved();
+            _gameController.Stop(Constants.SCALE_MECHANISM);
         }
     }
 }

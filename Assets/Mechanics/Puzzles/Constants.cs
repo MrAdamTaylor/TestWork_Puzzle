@@ -21,4 +21,7 @@ public static class Constants
 
     public static float FORCE_MULTIPLIER = 10f;
 
+    public static int ROTATE_MECHANISM = 0;
+    public static int MOVE_MECHANISM = 1;
+    public static int SCALE_MECHANISM = 2;
 }

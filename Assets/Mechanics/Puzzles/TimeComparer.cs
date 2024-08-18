@@ -21,11 +21,11 @@ public class TimeComparer : MonoBehaviour
     {
         if (_arrowHour == _digitalHour && _arrowMinute == _digitalMinute)
         {
-            _gameController.FirstPuzzleSolved();
+            _gameController.Execute(Constants.ROTATE_MECHANISM);
         }
         else
         {
-            _gameController.FirstPuzzleUnresolved();
+            _gameController.Stop(Constants.ROTATE_MECHANISM);
         }
     }
 

@@ -32,11 +32,11 @@ public class PasswordController : MonoBehaviour
     {
         if (_password == _currentValue)
         {
-            _gameController.SecondPuzzleSolved();
+            _gameController.Execute(Constants.MOVE_MECHANISM);
         }
         else
         {
-            _gameController.SecondPuzzleUnresolved();
+            _gameController.Stop(Constants.MOVE_MECHANISM);
         }
     }
 

@@ -1,12 +1,24 @@
 using System.Collections;
 using UnityEngine;
 
-public class ThirdMechanism : MonoBehaviour
+public class ThirdMechanism : Mechanism
 {
     private bool _needMove;
     [SerializeField] private float _effectTime = 2f;
 
-    public void Move()
+    public override void StartMechanism()
+    {
+        _needMove = true;
+        StartCoroutine(MakeStep());
+    }
+
+    public override void Stop()
+    {
+        _needMove = false;
+        StopCoroutine(MakeStep());
+    }
+
+    /*public void Move()
     {
         _needMove = true;
         StartCoroutine(MakeStep());
@@ -16,7 +28,7 @@ public class ThirdMechanism : MonoBehaviour
     {
         _needMove = false;
         StopCoroutine(MakeStep());
-    }
+    }*/
     
     private IEnumerator MakeStep()
     {

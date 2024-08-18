@@ -755,6 +755,10 @@ MonoBehaviour:
   _firstMechanism: {fileID: 1634846139}
   _secondMechanism: {fileID: 1497847863}
   _thirdMechanism: {fileID: 1672159330}
+  Mechanisms:
+  - {fileID: 1634846139}
+  - {fileID: 1497847863}
+  - {fileID: 1672159330}
 --- !u!1 &178094994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,9 +1389,9 @@ GameObject:
   m_Component:
   - component: {fileID: 318383861}
   - component: {fileID: 318383864}
-  - component: {fileID: 318383865}
   - component: {fileID: 318383863}
   - component: {fileID: 318383862}
+  - component: {fileID: 318383865}
   m_Layer: 0
   m_Name: Enter
   m_TagString: Interactable
@@ -1483,10 +1487,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 318383860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
+  m_Script: {fileID: 11500000, guid: a41102a566634615a93e3cf051148588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 9
+  _key: 0
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &327266341
 GameObject:
@@ -1700,7 +1704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 1
+  _key: 2
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &391290104
 GameObject:
@@ -3008,7 +3012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 6
+  _key: 7
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1001 &764783387
 PrefabInstance:
@@ -3409,7 +3413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 2
+  _key: 3
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &846608960
 GameObject:
@@ -3721,7 +3725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 0
+  _key: 1
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &925537615
 GameObject:
@@ -4031,7 +4035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 7
+  _key: 8
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!23 &969026668
 MeshRenderer:
@@ -6050,9 +6054,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1573753926}
   - component: {fileID: 1573753929}
-  - component: {fileID: 1573753930}
   - component: {fileID: 1573753928}
   - component: {fileID: 1573753927}
+  - component: {fileID: 1573753930}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Interactable
@@ -6148,10 +6152,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1573753925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
+  m_Script: {fileID: 11500000, guid: a41102a566634615a93e3cf051148588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 10
+  _key: 1
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &1579980673
 GameObject:
@@ -6264,7 +6268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 5
+  _key: 6
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &1580596119
 GameObject:
@@ -7118,7 +7122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 8
+  _key: 9
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!65 &1739937646
 BoxCollider:
@@ -7791,7 +7795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 4
+  _key: 5
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!4 &1947067929 stripped
 Transform:
@@ -8525,7 +8529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a01d6f195511e41b988815c0a07794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 3
+  _key: 4
   "_\u0441ontroller": {fileID: 1829190226}
 --- !u!1 &2138677391
 GameObject:

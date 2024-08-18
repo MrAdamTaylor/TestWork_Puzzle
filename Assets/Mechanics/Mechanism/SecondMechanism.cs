@@ -1,16 +1,27 @@
 using System.Collections;
 using UnityEngine;
 
-public class SecondMechanism : MonoBehaviour
+public class SecondMechanism : Mechanism
 {
     private float _lerpSpeed = 0.1f;
     private bool _needMove;
 
     [SerializeField] private Transform _startPoint;
     [SerializeField] private Transform _endPoint;
-    
 
-    public void Move()
+    public override void StartMechanism()
+    {
+        _needMove = true;
+        StartCoroutine(SmoothLerp());
+    }
+
+    public override void Stop()
+    {
+        _needMove = false;
+        StopCoroutine(SmoothLerp());
+    }
+
+    /*public void Move()
     {
         _needMove = true;
         StartCoroutine(SmoothLerp());
@@ -20,7 +31,7 @@ public class SecondMechanism : MonoBehaviour
     {
         _needMove = false;
         StopCoroutine(SmoothLerp());
-    }
+    }*/
     
     private IEnumerator SmoothLerp()
     {
